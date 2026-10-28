@@ -73,11 +73,40 @@ npm run build
 - Pagefind 搜索只读取构建结果；文章更新后需要重新执行 `npm run build`。
 - `public/pagefind/` 是构建生成目录，不提交到 Git。
 
+## 本地维护工具
+
+双击项目根目录的 `博客管理.cmd` 可打开中文维护菜单。该入口以及 `.local-tools/`、`.local-logs/`、`.local-backups/` 只用于本机管理，已被 Git 忽略，不得推送到 GitHub。
+
+菜单提供：
+
+- 新建 Markdown 文章并打开记事本编辑。
+- 为文章导入正文图片，压缩为 WebP 后把 Markdown 复制到剪贴板。
+- 设置文章封面、站点默认分享图、favicon 和站点头像。
+- 检查未使用图片并移动到本地回收目录。
+- 启动本地预览、执行检查并发布、查看 GitHub Actions 状态。
+- 备份或恢复文章、图片和核心配置。
+
+图片规则：
+
+- 正文图片位于 `public/images/posts/<文章标识>/`，最大宽度 `1600px`。
+- 文章封面为 `1200 × 630` 的 WebP。
+- 默认分享图为 `public/default-og.jpg`。
+- favicon 保持 `public/favicon.svg` 引用方式。
+- 站点头像为 `public/avatar.webp`，关于页使用固定的头像标记块。
+- 脚本不会自动修改正文，只会复制 Markdown 到剪贴板。
+
+维护工具测试位于 `.local-tools/tests/`，同样不提交。修改本地脚本后运行：
+
+```powershell
+node --test .local-tools/tests/*.test.mjs
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .local-tools/tests/powershell-smoke.ps1
+```
+
 ## 明确约束
 
 - RSS 功能已移除：不存在 RSS 图标、RSS 路由、RSS 自动发现或 `@astrojs/rss` 依赖，`/rss.xml` 必须保持 404。
 - 不重新引入示例文章或废弃主题文件。
-- 不删除 `.git`、`.gitignore` 或 `AGENTS.md`。
+- 不删除 `.git`、`.gitignore`、`AGENTS.md` 或本地维护工具。
 - `node_modules/`、`dist/`、`.astro/`、`public/pagefind/` 不进入 Git。
 - 不以 `npm audit fix --force` 盲目处理依赖；当前 `satori` 有一个暂无修复版本的中等严重性审计项。
 

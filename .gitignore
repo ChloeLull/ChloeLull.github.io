@@ -31,3 +31,9 @@ public/pagefind
 
 # docker compose
 compose.override.yaml
+
+# local-only blog maintenance tools
+/.local-tools/
+/.local-logs/
+/.local-backups/
+/博客管理.cmd
