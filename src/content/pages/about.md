@@ -1,13 +1,10 @@
 ---
-title: "关于"
-description: "关于本站与作者。"
+title: "关于本站"
+description: "关于 ChloeLull 的个人博客。"
 ---
-
-这里是我的个人博客。内容使用 [Astro](https://astro.build/) 与
-[AstroPaper](https://github.com/satnaing/astro-paper) 构建。
 
 ## 关于本站
 
-本站记录技术、生活以及值得长期保存的思考。
+这里是一个关于技术、生活与持续求索的个人空间。
 
-文章使用 Markdown 或 MDX 编写，并支持浅色、深色模式和站内搜索。
+我在这里记录学习过程中的片段、尚未完成的问题，以及那些值得长久思考的时刻。

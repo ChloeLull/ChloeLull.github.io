@@ -33,23 +33,15 @@ const homePath = getRelativeLocaleUrl(locale, "");
     class="app-layout my-1"
   >
     <section id="hero" class="border-border border-b pt-8 pb-6">
-      <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-        你好
+      <h1
+        class="border-accent my-8 border-s-2 ps-4 text-2xl leading-relaxed font-medium sm:text-3xl"
+      >
+        知不可乎骤得，托遗响于悲风。
       </h1>
-      <p>
-        AstroPaper 是一个简洁、响应式、无障碍且对 SEO 友好的 Astro 博客主题。
-        它遵循最佳实践，开箱即用地提供无障碍支持，默认支持浅色和深色模式，
-        还可以配置更多配色方案。
-      </p>
-      <p class="mt-2">
-        阅读博客文章，或查看{" "}
-        <LinkButton
-          class="hover:text-accent underline decoration-dashed underline-offset-4"
-          href="https://github.com/satnaing/astro-paper#readme"
-        >
-          README
-        </LinkButton>{" "}
-        了解更多信息。
+      <p
+        class="text-muted-foreground mt-6 max-w-2xl text-base leading-8 sm:text-lg"
+      >
+        在缓慢求索中，记录技术、生活，以及那些未竟却仍值得写下的事。
       </p>
       {
         socials.length > 0 && (

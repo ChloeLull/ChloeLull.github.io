@@ -7,7 +7,7 @@
 - 基础主题：AstroPaper 6.1.0。
 - 包管理器：npm；只维护 `package-lock.json`。
 - 默认语言：简体中文 `zh-CN`，时区 `Asia/Shanghai`。
-- 站点地址已配置为 `https://chloelull.github.io/`；标题、描述和作者仍为占位值。
+- 站点地址为 `https://chloelull.github.io/`，站名为“ChloeLull 的博客”，作者为 ChloeLull。
 - 部署仓库为 `ChloeLull/ChloeLull.github.io`，属于 GitHub 用户主页仓库，站点路径为根路径 `/`。
 - 文章目录 `src/content/posts/` 当前为空，因此构建会提示 posts 集合为空。
 - 已关闭 Astro 开发工具栏。
